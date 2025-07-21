@@ -1,0 +1,64 @@
+/* Banner - Layout com duas colunas */
+.banner {
+background-image: url(/assets/background-banner.svg);
+background-repeat: none;
+background-position: top;
+background-size: contain;
+margin-top: -100px;
+padding-top:150px ;
+
+}
+
+
+
+.botoes {
+    display: flex;
+    gap: 20px;
+}
+
+.botao-reservar,
+.botao-duvidas {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.botao-reservar {
+    background-color: #FF8548;
+    color: #ffffff;
+    border: none;
+}
+
+.botao-reservar:hover {
+    background-color: #ff503e;
+}
+
+.botao-duvidas {
+    background-color: transparent;
+    color: #000;
+    border: 2px solid #333;
+}
+
+.botao-duvidas:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Coluna 2 - Imagem */
+.coluna-2 {
+    flex: 1;
+    max-width: 600px; // Limita a largura da imagem
+}
+
+.imagem-principal img {
+    width: 100%;
+    height: auto; 
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  
+}
