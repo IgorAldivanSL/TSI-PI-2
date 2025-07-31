@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.produto-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 26%;
+    text-align: center;
+
+}
+
+.produto-container img.logo {
+    width: 60px;
+    margin-bottom: 12px;
+}
+
+.produto-container h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #222;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    height: 50px;
+    width: 100%;
+    padding: 12px 45px 12px 45px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+}
+
+.input-group-cadastro1 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    /* Para quebrar em telas pequenas */
+}
+
+.input-group-cadastro1 input {
+    height: 50px;
+    flex: 1 1 48%;
+    /* Cresce até 48% e quebra para baixo */
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+    min-width: 120px;
+}
+
+.descriçao {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.descriçao textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #FF8548;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff503e;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .produto-container {
+        padding: 20px;
+    }
+
+    .input-group-cadastro1 input {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .produto-container {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .produto-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .produto-container {
+        width: 90%;
+    }
+}

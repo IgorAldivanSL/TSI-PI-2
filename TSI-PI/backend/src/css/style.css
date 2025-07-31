@@ -1,0 +1,663 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+/* ------------------------------- HEADER ------------------------------- */
+header {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-around !important;
+  align-items: center;
+  padding: 20px 50px;
+  background-color: #f8f8f8;
+}
+
+.logo {
+  width: 50px;
+}
+
+.menu-container {
+  display: flex;
+  text-align: right;
+  justify-content: right;
+}
+
+/* Estilo para o botão do menu */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 5px 20px;
+}
+
+header nav li:hover {
+  border-radius: 10px;
+  background-color: #FF8548;
+}
+
+a:hover{
+    color: #fff !important;
+
+}
+
+/* Botão de Contato */
+.botao-contato {
+  background-color: #FF8548;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botao-contato:hover {
+  background-color: #ff503e;
+}
+
+/* Media query para telas menores */
+.contato-container {
+  margin-top: 60px;
+}
+
+.contato img {
+  height: 300px !important;
+}
+
+.coluna-1 {
+  width: 50%;
+}
+
+.coluna-2 {
+  width: 50%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px; /* Espaçamento entre os campos Nome e E-mail */
+}
+
+input, textarea {
+  height: 60px;
+  padding: 10px;
+  border: none;
+  background-color: #D9D9D9;
+  font-size: 16px;
+  border-radius: 15px;
+  transition: background-color 0.3s ease;
+  width: 100%; /* Garantir que os inputs fiquem com largura adequada */
+}
+
+.input-group input {
+  width: calc(60% - 10px); /* Dividir igualmente os campos Nome e E-mail */
+}
+
+input:focus, textarea:focus {
+  background-color: #B4B4B4;
+  outline: none;
+}
+
+.enviar-contato {
+  background-color: #FF8548;
+  color: white;
+  border: none;
+  width: 300px;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: left; /* Centraliza o botão */
+}
+
+button:hover {
+  background-color: #d86d37;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Banner - Layout com duas colunas */
+.banner {
+  background-image: url(/assets/background-banner.svg);
+  background-repeat: none;
+  background-position: top;
+  background-size: contain;
+  margin-top: -100px;
+  padding-top: 150px;
+}
+
+.botoes {
+  display: flex;
+  gap: 20px;
+}
+
+.botao-reservar,
+.botao-duvidas {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botao-reservar {
+  background-color: #FF8548;
+  color: #ffffff;
+  border: none;
+}
+
+.botao-reservar:hover {
+  background-color: #ff503e;
+}
+
+.botao-duvidas {
+  background-color: transparent;
+  color: #000;
+  border: 2px solid #333;
+}
+
+.botao-duvidas:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Coluna 2 - Imagem */
+.coluna-2 {
+  flex: 1;
+  max-width: 600px;
+}
+
+.imagem-principal img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsividade */
+/* ------------------------------- SEÇÃO DE DESTINOS ------------------------------- */
+.destinos {
+  margin-top: 80px;
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  text-align: center;
+  padding: 0;
+}
+.destinos .destinos-container {
+  border-radius: 35px;
+  background-color: #FF8548;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 20px;
+}
+.destinos h2 {
+  margin-bottom: -20px;
+}
+
+.destino-card {
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 375px;
+  padding: 15px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+.destino-card:hover {
+  transform: scale(1.05);
+}
+.destino-card .img-card {
+  position: relative;
+  width: 100%; /* Added for consistent image sizing */
+}
+.destino-card .img-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 15px;
+}
+.destino-card .img-card .preco {
+  position: absolute;
+  bottom: 35px;
+  left: 10px; /* Adjusted positioning for better alignment */
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.8705882353);
+  padding: 2px 20px;
+  border-radius: 35px;
+}
+.destino-card h3 {
+  font-size: 1.5rem;
+  margin: 0 0 10px;
+}
+.destino-card p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.destino-card .data {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+.destino-card .data span {
+  display: inline-block;
+  margin-right: 5px;
+}
+.destino-card .data .data-valor {
+  background-color: #FF8548;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 3px 5px;
+  color: #61321a;
+}
+.destino-card .btn-reservar {
+  background-color: #114A49;
+  color: #fff;
+  border: none;
+  padding: 2px 3px;
+  border-radius: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 1rem;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+.destino-card .btn-reservar:hover {
+  background-color: #155e5c;
+}
+.destino-card .btn-reservar i {
+  color: #ffffff;
+  padding: 3px 5px;
+  border-radius: 50%;
+  font-size: 2rem;
+  margin-left: -20px;
+}
+.destino-card .btn-reservar span {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* ------------------------------- SEÇÃO 3 (Imagem + Texto + Benefícios) ------------------------------- */
+.texto-sessao3 p {
+  flex: 2;
+  margin-top: 10px;
+  max-width: 600px;
+  margin-right: 40px;
+}
+
+.imagem-vantagens img {
+  width: 90% !important;
+}
+
+/* ------------------------------- BENEFÍCIOS ------------------------------- */
+.beneficios {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.beneficios-texto {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  background: linear-gradient(90deg, #FF8548, #FF4F7C);
+  padding: 15px;
+  border-radius: 20px;
+  color: white;
+}
+
+.icon {
+  color: white;
+  font-size: 30px;
+}
+
+.beneficios-texto h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.beneficios-texto p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #ffffff;
+}
+
+.sobre {
+  margin-top: -40px;
+}
+.sobre img {
+  height: 600px;
+}
+.sobre p {
+  margin-top: 20px;
+}
+.sobre .img-mobile {
+  display: none;
+}
+
+.depoimentos-container {
+  margin-top: 80px;
+  justify-content: center;
+  width: 100%;
+  display: grid;
+  text-align: center;
+  padding: 0;
+}
+
+.depoimentos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  margin: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  background-color: #114A49;
+  border-radius: 25px;
+}
+
+.cards img {
+  height: 50px;
+  border-radius: 100px;
+}
+
+.cards h3 {
+  color: white;
+}
+
+i {
+  color: orange;
+}
+
+.cards p {
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+  .cards {
+    padding: 15px;
+  }
+  .cards h3 {
+    font-size: 1.2em;
+  }
+  .cards p {
+    font-size: 0.9em;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* ------------------------------- GLOBAL - TÍTULOS ------------------------------- */
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 4.3rem;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+h2 {
+  line-height: 40px;
+  font-size: 2.1rem;
+}
+
+h1 + p {
+  margin-top: 0;
+}
+
+p {
+  font-size: 1rem !important;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px;
+  background-color: #f8f8f8;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+/* Coluna 1 - Texto */
+.coluna-1 {
+  flex: 1;
+  max-width: 600px;
+  padding-right: 20px;
+}
+
+.coluna-1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.coluna-1 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.img-mobile {
+  display: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 40px;
+  padding: 70px 0px;
+  align-items: center;
+  background-color: #114A49;
+  color: #fff;
+}
+
+/* ------------------------------- RESPONSIVIDADE ------------------------------- */
+@media (max-width: 768px) {
+  .destinos .destinos-container {
+    padding: 20px;
+  }
+  header {
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 10%;
+  }
+  .menu-toggle {
+    display: none !important;
+  }
+  .destinos-container {
+    flex-direction: column;
+  }
+  .container-sessao3 {
+    flex-direction: column;
+    text-align: center;
+  }
+  .imagem-sessao3 {
+    margin-bottom: 20px;
+  }
+  .texto-sessao3 {
+    margin-right: 0;
+  }
+  .botao-contato {
+    width: 100%;
+    margin-top: 20px;
+  }
+  .sobre img {
+    display: none;
+  }
+  h1 {
+    margin-top: 20px;
+    font-size: 60px !important;
+  }
+  .imagem-principal img {
+    display: none;
+  }
+  .img-mobile {
+    width: 100%;
+    height: auto;
+    display: block !important;
+  }
+  .banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  .coluna-1 {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  .coluna-2 {
+    max-width: 100%;
+  }
+  .botoes {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  header nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f8f8f8;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  header nav.active {
+    display: flex;
+  }
+  header nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header nav ul li {
+    margin: 10px 0;
+  }
+  .depoimentos {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cards {
+    width: 90%;
+    margin: 10px 0;
+  }
+  .destinos {
+    margin-top: -20px;
+  }
+  .vantagens {
+    margin-bottom: 70px;
+    padding: 30px;
+    display: block;
+  }
+  .vantagens h2 {
+    text-align: center !important;
+  }
+  .vantagens img {
+    height: 10px !important;
+  }
+  .imagem-vantagens img {
+    display: none;
+  }
+  .sobre {
+    margin-top: -30px;
+    display: block;
+    padding: 20px;
+  }
+  .sobre img {
+    height: 400px;
+    margin-bottom: 50px;
+  }
+  .contato-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .coluna-1 {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .coluna-2 {
+    width: 100%;
+  }
+  form {
+    width: 100%;
+  }
+  .input-group {
+    flex-direction: column;
+  }
+  .input-group input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  button {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+
+/*# sourceMappingURL=style.css.map */
+
+

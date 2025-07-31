@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cadastro-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 24%;
+    text-align: center;
+
+}
+
+.cadastro-container img.logo {
+    width: 60px;
+    margin-bottom: 12px;
+}
+
+.cadastro-container h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+    color: #222;
+}
+
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    height: 50px;
+    width: 100%;
+    padding: 12px 45px 12px 45px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+}
+
+.input-group-cadastro1 {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 2.6px;
+}
+
+.input-group-cadastro1 input {
+    height: 50px;
+    width: 100%;
+    padding: 12px 45px 12px 45px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #EAEAEA;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #FF8548;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 6px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff503e;
+}
+
+.fazer-login {
+    margin-top: 14px;
+    display: block;
+    color: #444;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .cadastro-container {
+        width: 35%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cadastro-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .cadastro-container {
+        width: 90%;
+    }
+}
