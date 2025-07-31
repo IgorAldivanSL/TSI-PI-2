@@ -33,7 +33,7 @@ try {
                     <li><a href="#sobre">Sobre</a></li>
                     <li><a href="#depoimentos">Depoimentos</a></li>
                 </ul>
-                <a href="login.php"><button class="botao-contato">l00gin</button></a>
+                <a href="login.php"><button class="botao-contato">login</button></a>
             </nav>
         </div>
     </header>
