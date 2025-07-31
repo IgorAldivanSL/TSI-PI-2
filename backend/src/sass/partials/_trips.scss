@@ -1,0 +1,132 @@
+/* ------------------------------- SEÇÃO DE DESTINOS ------------------------------- */
+
+.destinos {
+    margin-top: 80px;
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    text-align: center;
+    padding: 0;
+
+    .destinos-container {
+        border-radius: 35px;
+        background-color: #FF8548;
+        display: flex;
+  
+        flex-wrap: wrap;
+        padding:40px;
+        gap: 20px;
+
+    }
+
+    h2 {
+        margin-bottom: -20px;
+
+    }
+}
+
+
+
+.destino-card {
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 375px;
+    padding: 15px;
+    text-align: left;
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    .img-card {
+        position: relative;
+        width: 100%; /* Added for consistent image sizing */
+
+        img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 15px;
+        }
+
+        .preco {
+            position: absolute;
+            bottom: 35px;
+            left: 10px; /* Adjusted positioning for better alignment */
+            font-size: 1rem;
+            font-weight: bold;
+            color: #000;
+            background-color: #ffffffde;
+            padding: 2px 20px;
+            border-radius: 35px;
+        }
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        margin: 0 0 10px;
+    }
+
+    p {
+        font-size: 0.9rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .data {
+        font-size: 0.9rem;
+        color: #444;
+        margin-bottom: 20px;
+        border-radius: 20px;
+
+        span {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .data-valor {
+            background-color: #FF8548;
+            font-weight: 600;
+            border-radius: 10px;
+            padding: 3px 5px;
+            color: #61321a;
+        }
+    }
+
+    .btn-reservar {
+        background-color: #114A49;
+        color: #fff;
+        border: none;
+        padding: 2px 3px;
+        border-radius: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        font-size: 1rem;
+        width: 100%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: #155e5c;
+        }
+
+        i {
+            color: #ffffff;
+            padding: 3px 5px;
+            border-radius: 50%;
+            font-size: 2rem;
+            margin-left: -20px;
+        }
+
+        span {
+            flex-grow: 1;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 768px)  {
+   
+}
