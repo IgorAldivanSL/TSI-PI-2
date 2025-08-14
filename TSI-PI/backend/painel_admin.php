@@ -1,24 +1,21 @@
 <?php
 session_start(); // Iniciar a sessão
+require_once('conexao.php');
 
 if (!isset($_SESSION['admin_logado'])) {
     header('Location: login.php');
     exit();
 }
 ?>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/painel_admin.css">
-    <title>Document</title>
-</head>
-<body>
 
-<body>
-  <div class="main-container">
-    <div class="sidebar">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="src/css/painel_admin.css">
+<title>Document</title>
+
+<div class="main-container">
+  <div class="sidebar">
       <a href="index.php">
           <img class="logo" src="assets/logo.png" alt="Logo">
       </a>
@@ -39,13 +36,13 @@ if (!isset($_SESSION['admin_logado'])) {
                 <img src="assets/onibus.png" alt="Produtos" />
             </button>
         </div>
-    </div>
-
-    <div class="painel-conteudo" id="painel-conteudo">
-    </div>
+  </div>
+  <div class="painel-conteudo" id="painel-conteudo">
   </div>
 
-  <script>
+</div>
+
+<script>
     function carregarPagina(pagina) {
         fetch(pagina)
             .then(response => {
@@ -116,11 +113,11 @@ if (!isset($_SESSION['admin_logado'])) {
         });
       }
     }
+</script>
 
-    
-  </script>
+  
 
-</html>
+
 
 
 

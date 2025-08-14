@@ -18,30 +18,27 @@ if(isset($_SESSION['mensagem_erro'])) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="src/css/login.css">
 
-<body>
-    <div class="login-container">
-        <a href="index.php">
-            <img class="logo" src="assets/logo.png" alt="Logo">
-        </a>
-        <h2>Login</h2>
-        <form action="processa_login.php" method="post">
-            <div class="input-group">
-                <input type="email" name="email" placeholder="E-mail" required>
-            </div>
 
-            <div class="input-group">
-                <input type="password" name="senha" placeholder="Senha" required>
-            </div>
+<div class="login-container">
+    <a href="index.php">
+        <img class="logo" src="assets/logo.png" alt="Logo">
+    </a>
+    <h2>Login</h2>
+    <form action="painel_admin.php" method="post">
+        <div class="input-group">
+            <input type="email" name="email" placeholder="E-mail" required>
+        </div>
 
-            <input type="submit" value="ENTRAR">
-        </form>
+        <div class="input-group">
+            <input type="password" name="senha" placeholder="Senha" required>
+        </div>
 
-        <a class="cadastrar-admin" href="cadastrar_administrador.php">Crie sua conta</a>
+        <input type="submit" value="ENTRAR">
+    </form>
 
-    </div>
+    <a class="cadastrar-admin" href="cadastrar_administrador.php">Crie sua conta</a>
+</div>
 
-</body>
-</html>
 
 
 

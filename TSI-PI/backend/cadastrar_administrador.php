@@ -43,49 +43,45 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 ?>
 
 <!-- Início do código HTML -->
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/cadastrar_administrador.css">
-    <title>Cadastro</title>
-</head>
-<body>
-    <div class="cadastro-container">
-        <img class="logo"  src="assets/logo.png" alt="Logo">
-        <h2>Cadastro</h2>
-       <form action="cadastrar_administrador.php" method="post" >
-            <div class="input-group-cadastro1">
-                <i class="fas fa-user"></i>
-                <input type="text" name="nome" placeholder="Nome" required>
-                <input type="text" name="telefone" placeholder="Telefone" required>
-            </div>
 
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
-            </div>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="src/css/cadastrar_administrador.css">
+<title>Cadastro</title>
 
-            <div class="input-group">
-                <i class="fas fa-user"></i>
-                <input type="text" name="cpf" placeholder="CPF" required>
-                <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
-            </div>
+<div class="cadastro-container">
+    <img class="logo"  src="assets/logo.png" alt="Logo">
+    <h2>Cadastro</h2>
+    <form action="cadastrar_administrador.php" method="post" >
+        <div class="input-group-cadastro1">
+            <i class="fas fa-user"></i>
+            <input type="text" name="nome" placeholder="Nome" required>
+            <input type="text" name="telefone" placeholder="Telefone" required>
+        </div>
 
-            <div class="input-group-cadastro1">
-                <i class="fas fa-user"></i>
-                <input type="password" name="senha" placeholder="Senha" required>
-                <input type="password" name="senha" placeholder="Confirmar" required>
-            </div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="email" name="email" placeholder="E-mail" required>
+            <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
+        </div>
 
-            <button type="submit">Cadastrar</button>
-            <label for="ativo">Ativo:</label>
-            <input type="checkbox" name="ativo" id="ativo" value="1" checked>
-        </form>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input type="text" name="cpf" placeholder="CPF" required>
+            <i class="fas fa-eye-slash toggle-password" onclick="togglePassword()"></i>
+        </div>
 
-        <a class="fazer-login" href="login.php">Fazer login</a>
-    </div>
+        <div class="input-group-cadastro1">
+            <i class="fas fa-user"></i>
+            <input type="password" name="senha" placeholder="Senha" required>
+            <input type="password" name="senha" placeholder="Confirmar" required>
+        </div>
+
+        <button type="submit">Cadastrar</button>
+        <label for="ativo">Ativo:</label>
+        <input type="checkbox" name="ativo" id="ativo" value="1" checked>
+    </form>
+
+    <a class="fazer-login" href="login.php">Fazer login</a>
+</div>
     
-</body>

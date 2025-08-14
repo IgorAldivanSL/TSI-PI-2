@@ -85,44 +85,44 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="src/css/cadastrar_viagens.css">
+<title>Cadastrar Viagem</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/css/cadastrar_viagens.css">
-    <title>Cadastrar Viagem</title>
+<div class="produto-container">
+    <img class="logo"  src="assets/logo.png" alt="Logo">
+    <h2>Cadastro de Viagens</h2>
 
-<body>
+    <?php echo $mensagem_status; // Exibe mensagens de status, se houver ?>
+    <br>
+        
+    <form action="cadastrar_viagens.php" method="post" enctype="multipart/form-data">
+            
+        <div class="input-group">
+            <input type="file" name="imagem" accept="image/*" required><br><br>
+        </div>
+            
+        <div class="input-group">
+            <input type="text" name="titulo" placeholder="Titulo" required><br><br>                
+        </div>
+
+        <div class="input-group">
+            <input type="number" name="valor" placeholder="Valor" step="0.01" required><br><br>
+        </div>
+        
+        <div class="input-group-cadastro1">
+            <input type="date" name="data-ida"  required>
+            <input type="date" name="data-volta"  required>
+        </div>
+
+        <div class="descriçao">
+            <textarea name="descricao" rows="5"></textarea><br><br>
+        </div>
+
+        <button type="submit">Publicar</button>
+        
+    </form>
+</div>
     
-    <div class="produto-container">
-        <img class="logo"  src="assets/logo.png" alt="Logo">
-        <h2>Cadastro de Viagens</h2>
-        
-        <form action="cadastrar_viagens.php" method="post" enctype="multipart/form-data">
-            
-            <div class="input-group">
-                <input type="file" name="imagem" accept="image/*" required><br><br>
-            </div>
-            
-            <div class="input-group">
-                <input type="text" name="titulo" placeholder="Titulo" required><br><br>                
-            </div>
-
-            <div class="input-group">
-                <input type="number" name="valor" placeholder="Valor" step="0.01" required><br><br>
-            </div>
-        
-            <div class="input-group-cadastro1">
-                <input type="date" name="data-ida"  required>
-                <input type="date" name="data-volta"  required>
-            </div>
-
-            <div class="descriçao">
-                <textarea name="descricao" rows="5"></textarea><br><br>
-            </div>
-
-            <button type="submit">Publicar</button>
-        
-        </form>
-    </div>
-</body>
-</html>
+    

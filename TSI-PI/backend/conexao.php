@@ -1,13 +1,21 @@
 <?php
-// Caminho relativo com base na localização do próprio arquivo
-$dbPath = __DIR__ . '/RtripsDB.sqlite';
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+$host = 'localhost';
+$dbname = 'rtrips';
+$username = 'root';
+$password = '';
 
 try {
-    $pdo = new PDO("sqlite:$dbPath");
-    // echo "Conectado com sucesso!";
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
 } catch (PDOException $e) {
-    echo "Erro ao tentar conectar ao banco de dados SQLite!<br><br>";
-    echo $e->getMessage();
+    echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
     exit;
 }
+
 ?>

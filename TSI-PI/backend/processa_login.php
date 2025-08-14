@@ -1,8 +1,9 @@
 <?php
-session_start();
+
+session start();
 
 try {
-    require_once('conexao.php');
+    require_oonce('conexao.php');
 
     $email = trim($_POST['email']);
     $senha = trim($_POST['senha']);
@@ -15,20 +16,21 @@ try {
 
     $resultado = $query->fetch(PDO::FETCH_ASSOC);
 
-    if ($resultado) {
+    if ($resultado && password_verify($senha, $resultado['adm_senha'])){
         $_SESSION['admin_logado'] = true;
         header('Location: painel_admin.php');
         exit;
     } else {
-        $_SESSION['mensagem_erro'] = "NOME DE USUÁRIO OU SENHA INCORRETO";
+        $_SESSION['mensagem_erro'] = "NOME DE USUARIO OU SENHA INCORRETO";
         header('Location: login.php?erro');
         exit;
     }
-} catch (Exception $e) {
-    $_SESSION['mensagem_erro'] = "Erro de conexão: " . $e->getMessage();
+} catch (Exeption $e) {
+    $_SESSION['mensagem_erro'] = "Erro de conexão:" . $e->getMessage();
     header('Location: login.php?erro');
     exit;
-}
+}  
+
 ?>
 
 
